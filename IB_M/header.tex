@@ -1,1 +1,53 @@
-../header.tex
+% header.tex -- common preamble for IB notes (Linear Algebra etc.)
+
+% 基本數學套件
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{mathtools}
+\usepackage{bm}          % \bm{v} 粗體向量
+\usepackage{tikz-cd}     % commutative diagrams
+
+% 版面（可依個人喜好調整）
+\usepackage[a4paper,margin=2.5cm]{geometry}
+\usepackage{enumitem}
+\setlist[enumerate]{label=(\roman*),wide}
+
+% 數域簡寫
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\F}{\mathbb{F}}
+
+% 常用算子
+\DeclareMathOperator{\supp}{supp}
+\DeclareMathOperator{\im}{im}
+\DeclareMathOperator{\Mat}{Mat}
+\DeclareMathOperator{\GL}{GL}
+\DeclareMathOperator{\id}{id}
+
+% Dirac 風格括號
+\newcommand{\bra}{\langle}
+\newcommand{\ket}{\rangle}
+
+% 額外：rank / nullity 如有需要
+\DeclareMathOperator{\rank}{rank}
+\DeclareMathOperator{\nullity}{nullity}
+
+% 式子編號跟 section 綁在一起
+\numberwithin{equation}{section}
+
+% 定理環境設定
+\theoremstyle{plain}
+\newtheorem{thm}{Theorem}[section]
+\newtheorem{lemma}[thm]{Lemma}
+\newtheorem{prop}[thm]{Proposition}
+\newtheorem{cor}[thm]{Corollary}
+
+\theoremstyle{definition}
+\newtheorem{defi}[thm]{Definition}
+\newtheorem{eg}[thm]{Example}
+\newtheorem{notation}[thm]{Notation}
+
+\theoremstyle{remark}
+\newtheorem*{remark}{Remark}
+
+% 允許比較寬的矩陣
+\setcounter{MaxMatrixCols}{20}
